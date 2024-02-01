@@ -1,6 +1,6 @@
 /* Standarts */
 :root {
-	font-size: 62.5%; /* To make 1 rem = 10 px */ 
+	font-size: 62.5%; /* To make 1 rem = 10 px */
 
 	--ff-open: "Open Sans", sans-serif;
 	--ff-oswald: "Oswald", sans-serif;
@@ -76,17 +76,20 @@ CSS GERAL
 
 */
 
-body{
+body {
 	border-top: 1.08rem solid var(--color-border-top);
 }
 
-.container{
+.container {
 	max-width: 1200px;
 	margin-inline: auto;
 }
 
-.banner-main{
+.banner-main {
 	background-image: url(imgs/bg.jpg);
+	background-size: cover;
+	background-position: 50% 30%;
+	background-repeat: no-repeat;
 }
 
 /*
@@ -99,21 +102,21 @@ CSS ESPECÍFICO
 
 /* HEADER */
 
-.header{
+.header {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 30px;
+	gap: 3rem;
 
 	padding: 2rem;
 }
 
-.header form{
+.header form {
 	display: flex;
 	align-items: center;
 }
 
-.header form button{
+.header form button {
 	background-color: transparent;
 	border: none;
 	position: relative;
@@ -125,59 +128,57 @@ CSS ESPECÍFICO
 .header form input[type="search"]::-webkit-search-cancel-button,
 .header form input[type="search"]::-webkit-search-results-button,
 .header form input[type="search"]::-webkit-search-results-decoration {
-  display: none;
+	display: none;
 }
 
-
-#starbucks-logo{
+#starbucks-logo {
 	width: 6.4rem;
 	margin-right: auto;
 }
 
-#menu-icon{
+#menu-icon {
 	width: 2.4rem;
 }
 
-#loupe-search{
+#loupe-search {
 	height: 2rem;
 }
 
-#search{
-	width: 22.2rem;
+#search {
+	max-width: 22.2rem;
 	font-size: 1.6rem;
 	padding: 0.7rem 1rem;
 	border: 1px solid #999;
 	outline: 0; /* removes the focus animation */
 }
 
-
 /* FIRST BANNER AREA */
 
-.banner-body{
-	padding-left: 4.8rem;
+.banner-body {
+	padding-inline: 4.8rem;
 	padding-block: 12.8rem;
 }
 
-.banner-body h1{
+.banner-body h1 {
 	font-size: 9.6rem;
 	font-weight: var(--fw-800);
 	font-family: var(--ff-oswald);
 	line-height: 1;
 }
 
-.banner-body p{
+.banner-body p {
 	margin-top: 4.8rem;
 	font-family: var(--ff-open);
 	font-size: 1.6rem;
 }
 
-.banner-imgs{
+.banner-imgs {
 	display: flex;
 	gap: 4rem;
 	margin-top: 6.4rem;
 }
 
-.image-back{
+.image-back {
 	width: 16rem;
 	height: 16rem;
 	border-radius: 8rem;
@@ -188,62 +189,58 @@ CSS ESPECÍFICO
 	background-size: cover;
 }
 
-.image-back:first-child{
+.image-back:first-child {
 	background-image: url(imgs/c1.jpg);
 }
 
-.image-back:nth-child(2){
+.image-back:nth-child(2) {
 	background-image: url(imgs/c2.jpg);
 }
 
-.image-back:last-child{
+.image-back:last-child {
 	background-image: url(imgs/c3.jpg);
 }
 
 /* GRID AREAS */
 
-
 /* FIRST GRID AREA */
 
-.area-grid{
+.area-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto 30rem;
-	grid-template-areas: 
-	
-	"body-1 img1-1"
-	"img2-1 img1-1"
-	;
+	grid-template-areas:
+		"body-1 img1-1"
+		"img2-1 img1-1";
 }
 
-
-.bar{
+.bar {
 	background-color: var(--color-bar);
 	width: 17.6rem;
 	height: 2.1rem;
 	margin-bottom: 1.6rem;
 }
 
-.area-body{
+.area-body {
 	grid-area: body-1;
 	padding-inline: 16rem;
 	padding-block: 4.8rem;
 	color: black;
 }
 
-.area-body h4{
+.area-body h4 {
 	font-size: 3.6rem;
 	font-weight: var(--fw-800);
 	font-family: var(--ff-oswald);
 	line-height: 1.2;
 }
 
-#Gagas{
+#Gagas {
 	font-style: italic;
 	margin-block: 2rem;
 }
 
-.area-body p{
+.area-body p {
 	font-family: var(--ff-open);
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -251,7 +248,7 @@ CSS ESPECÍFICO
 
 /* THE TEMPLATE SHARES THE BUTTONS */
 
-.btn{
+.btn {
 	display: block;
 	width: 17.6rem;
 	background-color: transparent;
@@ -267,13 +264,13 @@ CSS ESPECÍFICO
 	padding: 1rem 3rem;
 }
 
-.btn:hover{
+.btn:hover {
 	background-color: var(--color-btn);
 	border: 2px solid transparent;
 	color: white;
 }
 
-#image1-area-1{
+#image1-area-1 {
 	height: 100%;
 	grid-area: img1-1;
 	background-image: url(imgs/f1.jpg);
@@ -282,7 +279,7 @@ CSS ESPECÍFICO
 	background-repeat: no-repeat;
 }
 
-#image2-area-1{
+#image2-area-1 {
 	grid-area: img2-1;
 	background-image: url(imgs/f2.jpg);
 	background-position: center;
@@ -292,28 +289,26 @@ CSS ESPECÍFICO
 
 /* SECOND GRID AREA */
 
-.area-grid.second{
+.area-grid.second {
 	grid-template-rows: auto 30rem;
-	grid-template-areas: 
-	
-	"img1-2 body-2"
-	"img1-2 img2-2"
-	;
+	grid-template-areas:
+		"img1-2 body-2"
+		"img1-2 img2-2";
 }
 
-.area-grid.second .area-body{
-	padding-block: 9rem; 
+.area-grid.second .area-body {
+	padding-block: 9rem;
 }
 
-.area-body.second{
+.area-body.second {
 	grid-area: body-2;
 }
 
-.area-body.second p{
+.area-body.second p {
 	margin-top: 2rem;
 }
 
-#image1-area-2{
+#image1-area-2 {
 	height: 100%;
 	grid-area: img1-2;
 	background-image: url(imgs/f3.jpg);
@@ -322,7 +317,7 @@ CSS ESPECÍFICO
 	background-repeat: no-repeat;
 }
 
-#image2-area-2{
+#image2-area-2 {
 	grid-area: img2-2;
 	background-image: url(imgs/f4.jpg);
 	background-position: center;
@@ -335,12 +330,10 @@ CSS ESPECÍFICO
 .area-grid-two {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-areas: 
-	"body-3 img1-3"
-	;
+	grid-template-areas: "body-3 img1-3";
 }
 
-.area-grid-two .area-body{
+.area-grid-two .area-body {
 	grid-area: body-3;
 	padding-left: 16rem;
 	padding-block: 25rem;
@@ -349,11 +342,11 @@ CSS ESPECÍFICO
 	background-position: left;
 }
 
-.area-grid-two .area-body p{
+.area-grid-two .area-body p {
 	margin-top: 2rem;
 }
 
-#image-area-3{
+#image-area-3 {
 	grid-area: img1-3;
 	height: 100%;
 	background-image: url(imgs/f5.jpg);
@@ -364,14 +357,13 @@ CSS ESPECÍFICO
 
 /* SECOND BANNER AREA */
 
-.second-banner{
+.second-banner {
 	display: grid;
 	grid-template-columns: 2fr 3fr;
-	grid-template-areas: 
-	"body-banner right-banner";
+	grid-template-areas: "body-banner right-banner";
 }
 
-.banner-right{
+.banner-right {
 	background-image: url(imgs/bg3.jpg);
 	background-position: left;
 	background-repeat: no-repeat;
@@ -379,13 +371,136 @@ CSS ESPECÍFICO
 	grid-area: right-banner;
 }
 
-.second-banner .area-body{
+.second-banner .area-body {
 	padding-left: 16rem;
 	padding-block: 20rem;
 	grid-area: body-banner;
 	background-color: #e8e9ee;
 }
 
-.second-banner .area-body p{
+.second-banner .area-body p {
 	margin-top: 2rem;
+}
+
+/* RESPONSIVE ADJUSTS */
+
+/* TABLET */
+
+@media (width > 600px) and (width < 800px) {
+	.area-body,
+	.area-grid.second .area-body,
+	.second-banner .area-body,
+	.area-grid-two .area-body {
+		padding-inline: 8rem;
+	}
+	.banner-right {
+		background-position: left;
+	}
+}
+
+/* MOBILE */
+
+@media (width <= 600px) {
+	.header {
+		gap: 1rem;
+	}
+
+	.area-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 60rem auto 30rem;
+		grid-template-areas:
+			"img1-1"
+			"body-1"
+			"img2-1";
+	}
+
+	#image1-area-1 {
+		background-image: url(imgs/f1.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.area-body,
+	.area-grid.second .area-body,
+	.second-banner .area-body,
+	.area-grid-two .area-body {
+		padding-inline: 8rem;
+		padding-block: 5rem;
+	}
+
+	.banner-imgs {
+		gap: 2rem;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.banner-body h1 {
+		font-size: 5rem;
+	}
+
+	.banner-body {
+		margin-inline: auto;
+	}
+
+	.area-grid.second {
+		grid-template-rows: 30rem auto 30rem;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"img1-2"
+			"body-2"
+			"img2-2";
+	}
+
+	.second-banner {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 30rem;
+		grid-template-areas:
+			"body-banner"
+			"right-banner";
+	}
+
+	.area-grid-two {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 30rem;
+		grid-template-areas:
+			"body-3"
+			"img1-3";
+	}
+
+	.area-grid-two h4 {
+		text-wrap: wrap;
+		font-size: 3rem;
+	}
+}
+
+@media (width <= 360px) {
+
+	.header {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	#starbucks-logo {
+		margin-inline: auto;
+	}
+
+	.banner-body h1 {
+		font-size: 3rem;
+	}
+
+	#search {
+		position: relative;
+		left: 1rem;
+	}
+
+	.area-body,
+	.area-grid.second .area-body,
+	.second-banner .area-body,
+	.area-grid-two .area-body {
+		padding-inline: 6rem;
+	}
 }
