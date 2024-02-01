@@ -151,7 +151,7 @@ CSS ESPECÍFICO
 }
 
 
-/* BANNER */
+/* FIRST BANNER AREA */
 
 .banner-body{
 	padding-left: 4.8rem;
@@ -226,7 +226,7 @@ CSS ESPECÍFICO
 
 .area-body{
 	grid-area: body-1;
-	padding-inline: 14.4rem;
+	padding-inline: 16rem;
 	padding-block: 4.8rem;
 	color: black;
 }
@@ -344,6 +344,9 @@ CSS ESPECÍFICO
 	grid-area: body-3;
 	padding-left: 16rem;
 	padding-block: 25rem;
+	background-image: url(imgs/bg2.jpg);
+	background-size: cover;
+	background-position: left;
 }
 
 .area-grid-two .area-body p{
@@ -359,14 +362,30 @@ CSS ESPECÍFICO
 	background-repeat: no-repeat;
 }
 
-#background{
-	width: 50rem;
-	position: absolute;
-	bottom: -2670px;
-	left: -100px;
-	z-index: -1;
-	opacity: 0.3;
+/* SECOND BANNER AREA */
+
+.second-banner{
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	grid-template-areas: 
+	"body-banner right-banner";
 }
 
+.banner-right{
+	background-image: url(imgs/bg3.jpg);
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-area: right-banner;
+}
 
+.second-banner .area-body{
+	padding-left: 16rem;
+	padding-block: 20rem;
+	grid-area: body-banner;
+	background-color: #e8e9ee;
+}
 
+.second-banner .area-body p{
+	margin-top: 2rem;
+}
