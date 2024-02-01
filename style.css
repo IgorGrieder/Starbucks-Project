@@ -115,9 +115,19 @@ CSS ESPECÍFICO
 
 .header form button{
 	background-color: transparent;
-	border: 1px solid #999;
-	border-left: none;
+	border: none;
+	position: relative;
+	right: 2.2rem;
 }
+
+/* Disable clear button */
+.header form input[type="search"]::-webkit-search-clear-button,
+.header form input[type="search"]::-webkit-search-cancel-button,
+.header form input[type="search"]::-webkit-search-results-button,
+.header form input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 
 #starbucks-logo{
 	width: 6.4rem;
@@ -129,7 +139,7 @@ CSS ESPECÍFICO
 }
 
 #loupe-search{
-	height: 3.8rem;
+	height: 2rem;
 }
 
 #search{
@@ -137,7 +147,6 @@ CSS ESPECÍFICO
 	font-size: 1.6rem;
 	padding: 0.7rem 1rem;
 	border: 1px solid #999;
-	border-right: none;
 	outline: 0; /* removes the focus animation */
 }
 
@@ -191,7 +200,10 @@ CSS ESPECÍFICO
 	background-image: url(imgs/c3.jpg);
 }
 
-/* AREAS GRID */
+/* GRID AREAS */
+
+
+/* FIRST GRID AREA */
 
 .area-grid{
 	display: grid;
@@ -199,10 +211,11 @@ CSS ESPECÍFICO
 	grid-template-rows: auto 30rem;
 	grid-template-areas: 
 	
-	"body img1"
-	"img2 img1"
+	"body-1 img1-1"
+	"img2-1 img1-1"
 	;
 }
+
 
 .bar{
 	background-color: var(--color-bar);
@@ -212,7 +225,7 @@ CSS ESPECÍFICO
 }
 
 .area-body{
-	grid-area: body;
+	grid-area: body-1;
 	padding-inline: 14.4rem;
 	padding-block: 4.8rem;
 	color: black;
@@ -225,7 +238,7 @@ CSS ESPECÍFICO
 	line-height: 1.2;
 }
 
-.area-body p:first-of-type{
+#Gagas{
 	font-style: italic;
 	margin-block: 2rem;
 }
@@ -235,6 +248,8 @@ CSS ESPECÍFICO
 	font-size: 1.6rem;
 	font-weight: 400;
 }
+
+/* THE TEMPLATE SHARES THE BUTTONS */
 
 .btn{
 	display: block;
@@ -260,7 +275,7 @@ CSS ESPECÍFICO
 
 #image1-area-1{
 	height: 100%;
-	grid-area: img1;
+	grid-area: img1-1;
 	background-image: url(imgs/f1.jpg);
 	background-position: center;
 	background-size: cover;
@@ -268,8 +283,48 @@ CSS ESPECÍFICO
 }
 
 #image2-area-1{
-	grid-area: img2;
+	grid-area: img2-1;
 	background-image: url(imgs/f2.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* SECOND GRID AREA */
+
+.area-grid.second{
+	grid-template-rows: auto 30rem;
+	grid-template-areas: 
+	
+	"img1-2 body-2"
+	"img1-2 img2-2"
+	;
+}
+
+.area-grid.second .area-body{
+	padding-block: 9rem; 
+}
+
+.area-body.second{
+	grid-area: body-2;
+}
+
+.area-body.second p{
+	margin-top: 2rem;
+}
+
+#image1-area-2{
+	height: 100%;
+	grid-area: img1-2;
+	background-image: url(imgs/f3.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#image2-area-2{
+	grid-area: img2-2;
+	background-image: url(imgs/f4.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
