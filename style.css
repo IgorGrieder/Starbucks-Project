@@ -207,7 +207,7 @@ CSS ESPECÍFICO
 
 .area-grid{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto 30rem;
 	grid-template-areas: 
 	
@@ -329,3 +329,44 @@ CSS ESPECÍFICO
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+/* THIRD GRID AREA */
+
+.area-grid-two {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: 
+	"body-3 img1-3"
+	;
+}
+
+.area-grid-two .area-body{
+	grid-area: body-3;
+	padding-left: 16rem;
+	padding-block: 25rem;
+}
+
+.area-grid-two .area-body p{
+	margin-top: 2rem;
+}
+
+#image-area-3{
+	grid-area: img1-3;
+	height: 100%;
+	background-image: url(imgs/f5.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#background{
+	width: 50rem;
+	position: absolute;
+	bottom: -2670px;
+	left: -100px;
+	z-index: -1;
+	opacity: 0.3;
+}
+
+
+
